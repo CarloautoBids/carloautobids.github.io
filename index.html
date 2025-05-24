@@ -8,9 +8,9 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f9fc;
+      color: #2d2d2d;
     }
     header {
       background-color: white;
@@ -18,58 +18,83 @@
       padding: 2rem 1rem 1rem;
     }
     header img {
-      max-width: 250px;
+      max-width: 220px;
       height: auto;
     }
     main {
       max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #ffffff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
     }
     h2 {
       color: #0d6efd;
     }
+    .steps {
+      margin: 1.5rem 0;
+      padding-left: 1rem;
+    }
+    .steps li {
+      margin-bottom: 1rem;
+    }
+    .example {
+      background: #f1f3f5;
+      border-left: 4px solid #0d6efd;
+      padding: 0.75rem 1rem;
+      margin: 1rem 0;
+      font-family: monospace;
+      white-space: pre-line;
+    }
     a.button {
       display: inline-block;
-      margin-top: 1rem;
+      margin-top: 1.5rem;
       padding: 0.75rem 1.5rem;
       background-color: #25d366;
       color: white;
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
+      font-size: 1rem;
     }
     footer {
       text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #666;
+      padding: 2rem 1rem;
+      font-size: 0.85rem;
+      color: #777;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="Carlo%20(1).png" alt="Carlo Logo">
+    <img src="Carlo%20(1).png" alt="Carlo Auto Bids logo">
   </header>
   <main>
-    <h2>How Carlo Works</h2>
-    <p><strong>Carlo Auto Bids</strong> helps you sell your car faster by sending your listing directly to a network of trusted dealers via WhatsApp. Here’s how it works:</p>
-    <ol>
-      <li>You send us your car details and photos through WhatsApp.</li>
-      <li>We forward your listing to verified car dealers.</li>
-      <li>Dealers place their bids directly to us.</li>
-      <li>We present you with the best offer — fast and hassle-free.</li>
+    <h2>How Carlo Auto Bids Works</h2>
+    <ol class="steps">
+      <li><strong>You send a message</strong> to us on WhatsApp with your car's details and photos.</li>
+      <li><strong>We log your submission</strong> and send it out to our network of trusted car dealers.</li>
+      <li><strong>Dealers reply</strong> with their best offers directly via WhatsApp.</li>
+      <li><strong>You choose</strong> the best offer. It’s fast, simple, and no phone calls required.</li>
     </ol>
 
-    <h2>Sell Your Car Now</h2>
-    <p>Ready to start? Click below to message us:</p>
+    <h2>Example Messages</h2>
+    <div class="example">
+You: Hi, I'm selling a 2015 Mazda 3, 120,000 km, excellent condition. Rego: ABC123. Photos attached.
+
+Carlo: Thanks! We've shared your car with verified dealers. We'll update you with the best offers.
+
+Dealer: I can offer $9,200. Let me know if that works.
+
+You: Sounds good. Let's proceed.
+    </div>
+
+    <p>Try it out now and get a live bid in minutes:</p>
     <a class="button" href="https://wa.me/19342457270" target="_blank">Message Us on WhatsApp</a>
   </main>
   <footer>
-    &copy; 2025 Carlo Auto Bids. All rights reserved.
+    &copy; 2025 Carlo Auto Bids. Powered by trust and technology.
   </footer>
 </body>
 </html>
