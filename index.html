@@ -48,7 +48,9 @@
       white-space: pre-line;
     }
     a.button {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
       margin-top: 1.5rem;
       padding: 0.75rem 1.5rem;
       background-color: #25d366;
@@ -58,11 +60,25 @@
       font-weight: bold;
       font-size: 1rem;
     }
+    a.button img {
+      width: 20px;
+      height: 20px;
+    }
     footer {
       text-align: center;
       padding: 2rem 1rem;
       font-size: 0.85rem;
       color: #777;
+    }
+    @media (max-width: 600px) {
+      main {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+      a.button {
+        font-size: 0.95rem;
+        padding: 0.6rem 1rem;
+      }
     }
   </style>
 </head>
@@ -75,23 +91,27 @@
     <ol class="steps">
       <li><strong>You send a message</strong> to us on WhatsApp with your car's details and photos.</li>
       <li><strong>We log your submission</strong> and send it out to our network of trusted car dealers.</li>
-      <li><strong>Dealers reply</strong> with their best offers directly via WhatsApp.</li>
-      <li><strong>You choose</strong> the best offer. It’s fast, simple, and no phone calls required.</li>
+      <li><strong>Dealers reply</strong> to Carlo with their best offers.</li>
+      <li><strong>We message you back</strong> with the top 3 bids. You choose the best offer — all via chat.</li>
     </ol>
 
     <h2>Example Messages</h2>
     <div class="example">
 You: Hi, I'm selling a 2015 Mazda 3, 120,000 km, excellent condition. Rego: ABC123. Photos attached.
 
-Carlo: Thanks! We've shared your car with verified dealers. We'll update you with the best offers.
+Carlo: Thanks! We've shared your car with verified dealers. Here are the top offers:
+1. $9,200 from Sydney Cars
+2. $8,900 from Westside Auto
+3. $8,750 from City Traders
 
-Dealer: I can offer $9,200. Let me know if that works.
-
-You: Sounds good. Let's proceed.
+Reply with the number of the offer you'd like to accept.
     </div>
 
     <p>Try it out now and get a live bid in minutes:</p>
-    <a class="button" href="https://wa.me/19342457270" target="_blank">Message Us on WhatsApp</a>
+    <a class="button" href="https://wa.me/19342457270" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp logo">
+      Message Us on WhatsApp
+    </a>
   </main>
   <footer>
     &copy; 2025 Carlo Auto Bids. Powered by trust and technology.
