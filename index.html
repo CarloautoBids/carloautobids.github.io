@@ -3,83 +3,178 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Carlo Auto Bids - Sell your car fast via WhatsApp.">
+  <meta name="description" content="Sell your car fast with Carlo Auto Bids via WhatsApp." />
+  <meta name="theme-color" content="#25D366" />
   <title>Carlo Auto Bids</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --main-green: #25D366;
+      --text-dark: #222;
+      --text-light: #666;
+      --background: #f9f9f9;
+      --header-bg: white;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background);
+      color: var(--text-dark);
+      line-height: 1.6;
     }
+
     header {
-      background-color: #ffffff;
-      padding: 1rem 2rem;
+      background-color: var(--header-bg);
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
-    .logo {
-      height: 50px;
+
+    header img {
+      height: 40px;
+      margin-right: 1rem;
     }
+
     .hero {
-      text-align: center;
-      padding: 3rem 1rem;
-      background-image: url('hero-banner.jpg');
-      background-size: cover;
-      background-position: center;
+      background: url('banner.jpg') center/cover no-repeat;
       color: white;
+      text-align: center;
+      padding: 6rem 1rem 4rem;
     }
+
     .hero h1 {
       font-size: 3rem;
+      margin: 0;
     }
-    .button {
-      background-color: #25D366;
-      color: white;
-      padding: 1rem 2rem;
-      text-decoration: none;
+
+    .hero p {
       font-size: 1.25rem;
-      border-radius: 30px;
-      display: inline-block;
       margin-top: 1rem;
     }
-    section {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      background-color: var(--main-green);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1rem;
     }
-    footer {
-      background-color: #ffffff;
+
+    section {
+      padding: 4rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .chat-sim {
+      background: white;
       padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .chat-sim .message {
+      margin: 1rem 0;
+      padding: 0.75rem 1rem;
+      border-radius: 1.2rem;
+      max-width: 80%;
+      line-height: 1.5;
+    }
+
+    .seller {
+      background-color: #e1f5fe;
+      align-self: flex-start;
+    }
+
+    .carlo {
+      background-color: #dcf8c6;
+      align-self: flex-end;
+      margin-left: auto;
+    }
+
+    .faq {
+      margin-top: 2rem;
+    }
+
+    .faq h3 {
+      margin-top: 1.5rem;
+      color: var(--text-dark);
+    }
+
+    footer {
+      background-color: var(--header-bg);
       text-align: center;
-      font-size: 0.875rem;
-      color: #888;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-top: 4rem;
       border-top: 1px solid #eee;
+    }
+
+    .contact-info {
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="carlo_logo.png" alt="Carlo Logo" class="logo">
-  </header>
 
-  <div class="hero">
-    <h1>Sell Your Car Instantly</h1>
-    <p>Get the best price from verified dealers through WhatsApp</p>
-    <a href="https://wa.me/19342457270" class="button">Message Carlo on WhatsApp</a>
+<header>
+  <img src="carlo_logo.png" alt="Carlo Logo" />
+</header>
+
+<section class="hero">
+  <h1>Sell Your Car Fast via WhatsApp</h1>
+  <p>Carlo Auto Bids connects you to verified dealers who bid for your car in minutes</p>
+  <a class="cta-button" href="https://wa.me/19342457270" target="_blank">📲 Start Selling Now</a>
+</section>
+
+<section>
+  <h2>How Carlo Works</h2>
+  <div class="chat-sim">
+    <div class="message seller">Hi Carlo, I'm selling my Toyota Corolla 2018. Here's some photos.</div>
+    <div class="message carlo">Thanks! We've shared your car with verified dealers. You'll get the top 3 offers shortly. 🕐</div>
+    <div class="message carlo">✅ Highest Offer: $12,300<br>✅ Dealer 2: $12,000<br>✅ Dealer 3: $11,800</div>
+    <div class="message seller">Accepting the top offer!</div>
+    <div class="message carlo">Awesome! Dealer contact sent. Let us know once the sale is complete. 🚗💸</div>
   </div>
+</section>
 
-  <section>
-    <h2>How It Works</h2>
-    <p>1. Send your car details and photos to Carlo on WhatsApp.</p>
-    <p>2. Verified dealers place bids in real-time.</p>
-    <p>3. Carlo returns the top 3 offers in 30 minutes.</p>
-    <p>4. Accept the offer and finalize the sale directly with the dealer.</p>
-  </section>
+<section class="faq">
+  <h2>Frequently Asked Questions</h2>
+  <h3>📸 What do I need to send?</h3>
+  <p>Just message Carlo on WhatsApp with your car make, model, year, condition, and photos.</p>
 
-  <footer>
-    &copy; 2025 Carlo Auto Bids. All rights reserved. | hello@carloautobids.com
-  </footer>
+  <h3>⏱ How long does it take?</h3>
+  <p>You’ll usually get bids from dealers within 15-30 minutes during business hours (8am–9pm).</p>
+
+  <h3>💬 Who contacts who?</h3>
+  <p>Once you accept a bid, we connect you with the winning dealer directly to finalize pickup & payment.</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Carlo Auto Bids. All rights reserved.</p>
+  <div class="contact-info">
+    <p>📧 hello@carloautobids.com<br>🌐 www.carloautobids.com</p>
+  </div>
+</footer>
+
 </body>
 </html>
