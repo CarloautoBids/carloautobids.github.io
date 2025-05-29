@@ -3,200 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sell your car fast with Carlo Auto Bids via WhatsApp." />
-  <meta name="keywords" content="sell my car, car bids, WhatsApp car sale, Carlo Auto Bids" />
-  <meta name="author" content="Carlo Auto Bids" />
+  <meta name="description" content="Carlo Auto Bids - Sell your car fast via WhatsApp.">
   <title>Carlo Auto Bids</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #ffffff;
-      color: #1c1e21;
-      scroll-behavior: smooth;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
     }
-    .header {
+    header {
+      background-color: #ffffff;
+      padding: 1rem 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1.5rem 2rem;
-      background: #ffffff;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .header img.logo {
+    .logo {
       height: 50px;
     }
     .hero {
-      background: url('https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=1650&q=80') no-repeat center center;
-      background-size: cover;
-      padding: 6rem 2rem;
-      color: white;
       text-align: center;
-      animation: fadeIn 2s ease;
+      padding: 3rem 1rem;
+      background-image: url('hero-banner.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
     }
     .hero h1 {
       font-size: 3rem;
-      margin-bottom: 1rem;
     }
-    .hero p {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-    }
-    .whatsapp-btn {
-      display: inline-flex;
-      align-items: center;
-      background: #25d366;
+    .button {
+      background-color: #25D366;
       color: white;
-      padding: 0.8rem 1.6rem;
-      border-radius: 8px;
+      padding: 1rem 2rem;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: background 0.3s ease;
+      font-size: 1.25rem;
+      border-radius: 30px;
+      display: inline-block;
+      margin-top: 1rem;
     }
-    .whatsapp-btn:hover {
-      background: #1ebe5d;
-    }
-    .whatsapp-btn img {
-      height: 22px;
-      margin-right: 0.6rem;
-    }
-    .section {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-      padding: 4rem 2rem;
-      max-width: 1200px;
-      margin: auto;
-      animation: fadeInUp 1.2s ease;
-    }
-    .section img {
-      width: 100%;
-      max-width: 500px;
-      border-radius: 10px;
-    }
-    .section-content {
-      flex: 1;
-      min-width: 280px;
-    }
-    .section-content h2 {
-      color: #25d366;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .section-content p,
-    .section-content ol {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    .faq, .contact {
-      background: #f5f5f5;
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: 4rem auto;
-      border-radius: 12px;
-      animation: fadeInUp 1.2s ease;
-    }
-    .faq h2, .contact h2 {
-      color: #25d366;
-      font-size: 1.75rem;
-      margin-bottom: 1.5rem;
-    }
-    .faq-item {
-      margin-bottom: 1.5rem;
-    }
-    .faq-item strong {
-      display: block;
-      margin-bottom: 0.5rem;
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
     footer {
-      background: #1c1e21;
-      color: white;
-      padding: 2rem 1rem;
+      background-color: #ffffff;
+      padding: 2rem;
       text-align: center;
-      animation: fadeIn 2s ease;
-    }
-    footer p { margin: 0.5rem 0; }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      font-size: 0.875rem;
+      color: #888;
+      border-top: 1px solid #eee;
     }
   </style>
 </head>
 <body>
-  <div class="header">
-    <img src="Carlo%20(1).png" alt="Carlo Logo" class="logo">
+  <header>
+    <img src="carlo_logo.png" alt="Carlo Logo" class="logo">
+  </header>
+
+  <div class="hero">
+    <h1>Sell Your Car Instantly</h1>
+    <p>Get the best price from verified dealers through WhatsApp</p>
+    <a href="https://wa.me/19342457270" class="button">Message Carlo on WhatsApp</a>
   </div>
 
-  <section class="hero">
-    <h1>Sell Your Car Instantly via WhatsApp</h1>
-    <p>Send your car details and get the best dealer offers – all through chat.</p>
-    <a class="whatsapp-btn" href="https://wa.me/19342457270" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> Start Chat
-    </a>
-  </section>
-
-  <div class="section">
-    <img src="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?auto=format&fit=crop&w=800&q=80" alt="Phone demo">
-    <div class="section-content">
-      <h2>How It Works</h2>
-      <ol>
-        <li>Send us your car’s info and photos via WhatsApp.</li>
-        <li>We send it to our dealer network instantly.</li>
-        <li>Receive top 3 bids within 30 minutes.</li>
-        <li>Accept a bid and finalize with the buyer directly.</li>
-      </ol>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-content">
-      <h2>Example Chat</h2>
-      <p><strong>You:</strong> Hi Carlo, I’m selling my 2018 Toyota Corolla. 85,000km, Rego XYZ456. Located in Brisbane. [Photos attached]</p>
-      <p><strong>Carlo:</strong> Thanks! We’ll share your car with dealers and send back top 3 bids shortly.</p>
-      <p><strong>Carlo (later):</strong> Top 3 bids: $12,300 | $12,000 | $11,800. Reply SOLD to accept.</p>
-    </div>
-    <img src="https://images.unsplash.com/photo-1603357463041-94fdbbb84edb?auto=format&fit=crop&w=800&q=80" alt="WhatsApp demo">
-  </div>
-
-  <section class="faq">
-    <h2>FAQs</h2>
-    <div class="faq-item">
-      <strong>Is Carlo free to use?</strong>
-      <p>Yes, Carlo is 100% free for car sellers.</p>
-    </div>
-    <div class="faq-item">
-      <strong>How long does it take to receive offers?</strong>
-      <p>Usually under 30 minutes from your submission.</p>
-    </div>
-    <div class="faq-item">
-      <strong>Who buys the cars?</strong>
-      <p>Verified and licensed dealers across Australia.</p>
-    </div>
-  </section>
-
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Email:</strong> hello@carloautobids.com</p>
-    <p><strong>Phone:</strong> +61 412 345 678</p>
-    <p><strong>Hours:</strong> 8am – 9pm, 7 days a week</p>
+  <section>
+    <h2>How It Works</h2>
+    <p>1. Send your car details and photos to Carlo on WhatsApp.</p>
+    <p>2. Verified dealers place bids in real-time.</p>
+    <p>3. Carlo returns the top 3 offers in 30 minutes.</p>
+    <p>4. Accept the offer and finalize the sale directly with the dealer.</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Carlo Auto Bids. All rights reserved.</p>
-    <p>Powered by WhatsApp Business Automation</p>
+    &copy; 2025 Carlo Auto Bids. All rights reserved. | hello@carloautobids.com
   </footer>
 </body>
 </html>
