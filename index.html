@@ -31,7 +31,7 @@
       padding: 1rem 2rem;
     }
     .header-bar img.logo {
-      max-width: 180px; /* Increased from 140px */
+      max-width: 180px;
       height: auto;
     }
     .hero-content {
@@ -102,9 +102,6 @@
       margin-bottom: 0.5rem;
       color: #222;
     }
-    .faq-item p {
-      margin: 0;
-    }
     .centered {
       text-align: center;
     }
@@ -118,9 +115,91 @@
     footer p {
       margin: 0.5rem 0;
     }
+
+    .chat-bubble {
+      max-width: 90%;
+      padding: 0.75rem 1rem;
+      border-radius: 20px;
+      margin: 0.5rem 0;
+      line-height: 1.4;
+      font-size: 0.95rem;
+    }
+    .chat-bubble.you {
+      background-color: #dcf8c6;
+      align-self: flex-end;
+      text-align: left;
+      border-bottom-right-radius: 0;
+    }
+    .chat-bubble.carlo {
+      background-color: #f1f0f0;
+      align-self: flex-start;
+      text-align: left;
+      border-bottom-left-radius: 0;
+    }
+    .chat-sim {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      max-width: 600px;
+      margin: 1rem auto;
+    }
+
+    /* Typing bubble */
+    .chat-bubble.typing {
+      display: flex;
+      align-items: center;
+      width: 60px;
+      padding: 0.6rem;
+      height: 28px;
+      background-color: #f1f0f0;
+      border-radius: 20px;
+      margin-left: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .dot {
+      height: 8px;
+      width: 8px;
+      margin: 0 2px;
+      background-color: #888;
+      border-radius: 50%;
+      display: inline-block;
+      animation: bounce 1.4s infinite ease-in-out both;
+    }
+
+    .dot:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .dot:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes bounce {
+      0%, 80%, 100% {
+        transform: scale(0.6);
+        opacity: 0.3;
+      }
+      40% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .delayed {
+      opacity: 0;
+      animation: fadeIn 0.5s ease-in 2.5s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 <body>
+
   <div class="header-bar">
     <img src="Carlo%20(1).png" alt="Carlo Logo" class="logo">
   </div>
@@ -128,7 +207,7 @@
   <header>
     <div class="hero-content">
       <h1>🚗 Sell Your Car in 30 Minutes</h1>
-      <p>Carlo connects you with trusted dealers who bid via WhatsApp. No listings. No calls. Just your best offer — fast. ⚡</p>
+      <p>Carlo connects you with trusted dealers who bid via WhatsApp. No listings. No calls. Just your best offer — fast.</p>
       <a class="button" href="https://wa.me/19342457270" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon"> Message Us on WhatsApp
       </a>
@@ -139,43 +218,45 @@
     <section class="card">
       <h2>📋 How It Works</h2>
       <ol>
-        <li>📸 Send a WhatsApp message to Carlo with your car’s details and photos.</li>
-        <li>🔄 We instantly share your listing with verified car dealers.</li>
-        <li>🏆 You get the top 3 highest bids in 30 minutes.</li>
-        <li>✅ Accept the best offer and finalize directly with the dealer.</li>
+        <li>Send a WhatsApp message to Carlo with your car’s details and photos.</li>
+        <li>We instantly share your listing with verified car dealers.</li>
+        <li>You get the top 3 highest bids in 30 minutes.</li>
+        <li>Accept the best offer and finalize directly with the dealer.</li>
       </ol>
     </section>
 
     <section class="card">
       <h2>💬 Sample Chat</h2>
-      <p><strong>You:</strong> Hi Carlo, I’d like to sell my 2016 Mazda 3, 120,000km, Auto, Rego ABC123, located in Richmond VIC. [photos attached]</p>
-      <p><strong>Carlo:</strong> Thanks! We’ve shared your car with dealers. You’ll receive the top 3 bids within 30 minutes. ⏳</p>
-      <p><strong>Carlo (30 mins later):</strong><br>
-      🏁 Top 3 bids for ABC123:<br>
-      1. $8,500<br>
-      2. $8,200<br>
-      3. $8,100<br>
-      ✉️ Reply SOLD to accept any offer.</p>
+      <div class="chat-sim">
+        <div class="chat-bubble you">Hi Carlo, I’d like to sell my 2016 Mazda 3, 120,000km, Auto, Rego ABC123, located in Richmond VIC. [photos attached]</div>
+        <div class="chat-bubble carlo">Thanks! We’ve shared your car with verified dealers. You’ll receive the top 3 bids within 30 minutes. 🔄</div>
+        <div class="chat-bubble typing">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div class="chat-bubble carlo delayed">🏁 Top 3 bids:<br>1. $8,500<br>2. $8,200<br>3. $8,100<br>Reply SOLD to accept.</div>
+      </div>
     </section>
 
     <section class="card">
       <h2>❓ FAQs</h2>
       <div class="faq-item">
-        <strong>💸 Is there any cost to use Carlo?</strong>
+        <strong>Is there any cost to use Carlo?</strong>
         <p>No, it's completely free for car sellers.</p>
       </div>
       <div class="faq-item">
-        <strong>🔐 Who are the dealers?</strong>
+        <strong>Who are the dealers?</strong>
         <p>All dealers are verified professionals from our private network.</p>
       </div>
       <div class="faq-item">
-        <strong>🚙 What types of cars can I sell?</strong>
+        <strong>What types of cars can I sell?</strong>
         <p>You can sell any vehicle, from everyday cars to commercial vehicles.</p>
       </div>
     </section>
 
     <section class="card centered">
-      <h2>🚀 Ready to Sell Your Car?</h2>
+      <h2>✅ Ready to Sell Your Car?</h2>
       <p>Click below and get your best offer now.</p>
       <a class="button" href="https://wa.me/19342457270" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon"> Start on WhatsApp
@@ -191,8 +272,8 @@
 
   <footer>
     <p>&copy; 2025 Carlo Auto Bids. All rights reserved.</p>
-    <p>📧 hello@carloautobids.com</p>
-    <p>Powered by WhatsApp business automation 🤖</p>
+    <p>hello@carloautobids.com</p>
+    <p>Powered by WhatsApp business automation</p>
   </footer>
 </body>
 </html>
