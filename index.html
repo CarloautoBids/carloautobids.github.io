@@ -31,7 +31,7 @@
       padding: 1rem 2rem;
     }
     .header-bar img.logo {
-      max-width: 180px;
+      max-width: 220px;
       height: auto;
     }
     .hero-content {
@@ -145,16 +145,16 @@
     }
 
     /* Typing bubble */
-    .chat-bubble.typing {
+    .chat-bubble.typing.you {
       display: flex;
       align-items: center;
       width: 60px;
       padding: 0.6rem;
       height: 28px;
-      background-color: #f1f0f0;
+      background-color: #dcf8c6;
       border-radius: 20px;
-      margin-left: 0;
-      border-bottom-left-radius: 0;
+      align-self: flex-end;
+      border-bottom-right-radius: 0;
     }
 
     .dot {
@@ -231,10 +231,11 @@
         <div class="chat-bubble you">Hi Carlo, I’d like to sell my 2016 Mazda 3, 120,000km, Auto, Rego ABC123, located in Richmond VIC. [photos attached]</div>
         <div class="chat-bubble carlo">Thanks! We’ve shared your car with verified dealers. You’ll receive the top 3 bids within 30 minutes. 🔄</div>
         <div class="chat-bubble carlo delayed">🏁 Top 3 bids:<br>1. $8,500<br>2. $8,200<br>3. $8,100<br>Reply SOLD to accept.</div>
-      <div class="chat-bubble typing">
+        <div class="chat-bubble typing you">
           <span class="dot"></span>
           <span class="dot"></span>
           <span class="dot"></span>
+        </div>
       </div>
     </section>
 
