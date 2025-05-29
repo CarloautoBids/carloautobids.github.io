@@ -9,39 +9,42 @@
   <title>Carlo Auto Bids</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background: #ffffff;
       color: #1c1e21;
+      scroll-behavior: smooth;
     }
     .header {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 1.5rem 2rem;
-      background: #fff;
+      background: #ffffff;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     .header img.logo {
-      height: 40px;
+      height: 50px;
     }
     .hero {
       background: url('https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=1650&q=80') no-repeat center center;
       background-size: cover;
-      padding: 5rem 2rem;
+      padding: 6rem 2rem;
       color: white;
       text-align: center;
+      animation: fadeIn 2s ease;
     }
     .hero h1 {
-      font-size: 2.75rem;
+      font-size: 3rem;
       margin-bottom: 1rem;
     }
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       margin-bottom: 2rem;
     }
     .whatsapp-btn {
@@ -49,31 +52,39 @@
       align-items: center;
       background: #25d366;
       color: white;
-      padding: 0.75rem 1.5rem;
+      padding: 0.8rem 1.6rem;
       border-radius: 8px;
       text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: background 0.3s ease;
+    }
+    .whatsapp-btn:hover {
+      background: #1ebe5d;
     }
     .whatsapp-btn img {
-      height: 20px;
-      margin-right: 0.5rem;
+      height: 22px;
+      margin-right: 0.6rem;
     }
     .section {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       gap: 2rem;
       padding: 4rem 2rem;
       max-width: 1200px;
       margin: auto;
+      animation: fadeInUp 1.2s ease;
     }
     .section img {
-      width: 50%;
+      width: 100%;
+      max-width: 500px;
       border-radius: 10px;
     }
     .section-content {
-      width: 50%;
+      flex: 1;
+      min-width: 280px;
     }
     .section-content h2 {
       color: #25d366;
@@ -85,16 +96,15 @@
       font-size: 1.1rem;
       line-height: 1.6;
     }
-    .faq,
-    .contact {
+    .faq, .contact {
       background: #f5f5f5;
       padding: 4rem 2rem;
       max-width: 1000px;
-      margin: auto;
+      margin: 4rem auto;
       border-radius: 12px;
+      animation: fadeInUp 1.2s ease;
     }
-    .faq h2,
-    .contact h2 {
+    .faq h2, .contact h2 {
       color: #25d366;
       font-size: 1.75rem;
       margin-bottom: 1.5rem;
@@ -111,9 +121,17 @@
       color: white;
       padding: 2rem 1rem;
       text-align: center;
+      animation: fadeIn 2s ease;
     }
-    footer p {
-      margin: 0.5rem 0;
+    footer p { margin: 0.5rem 0; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
